@@ -1,0 +1,224 @@
+/* Personaliza a barra de rolagem */
+.tasklist-container {
+    width: 800px;
+    margin: 20px auto; /* Adiciona espaçamento no topo e na parte inferior */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #03e9f4;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    max-height: 80vh; /* Limita a altura máxima */
+    overflow-y: auto; /* Adiciona barra de rolagem interna se necessário */
+}
+
+/* Estiliza a barra de rolagem */
+.tasklist-container::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+.tasklist-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Cor do fundo da barra */
+    border-radius: 10px;
+}
+
+.tasklist-container::-webkit-scrollbar-thumb {
+    background: #03e9f4; /* Cor do "polegar" da barra */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.tasklist-container::-webkit-scrollbar-thumb:hover {
+    background: #029dbb; /* Cor ao passar o mouse */
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+/* Estiliza os selects (tabelas suspensas) */
+.filter-container select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-container select:focus {
+    border-color: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4;
+}
+
+/* Botões com o mesmo estilo do login */
+button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.create-task-container {
+    position: relative; /* Define o contêiner como referência para o botão "X" */
+    margin-top: 20px;
+    padding: 30px; /* Aumenta o espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #03e9f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limita a largura máxima */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estiliza os campos de entrada na seção "Criar Nova Tarefa" */
+.create-task-container input,
+.create-task-container textarea,
+.create-task-container select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    margin: 0 auto 20px; /* Centraliza os campos e adiciona espaçamento inferior */
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-task-container input:focus,
+.create-task-container textarea:focus,
+.create-task-container select:focus {
+    border-color: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4;
+}
+
+/* Estiliza os rótulos */
+.create-task-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #03e9f4;
+}
+
+/* Ajusta o botão "Criar" */
+.create-task-container .create-button {
+    display: block; /* Garante que o botão fique centralizado */
+    margin: 20px auto 0; /* Centraliza o botão e adiciona espaçamento superior */
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-task-container .create-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.create-task-container .close-button:hover {
+    color: #ff4b5c; /* Cor vermelha ao passar o mouse */
+}
+
+.create-task-container .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #03e9f4;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logout-button {
+    position: absolute; /* Relativo ao contêiner pai */
+    top: 10px; /* Distância do topo do contêiner */
+    left: 10px; /* Distância da borda esquerda do contêiner */
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1; /* Garante que o botão fique acima de outros elementos */
+}
+
+
+.logout-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.tasklist-container {
+    position: relative; /* Define o contêiner como referência para o botão "Sair" */
+    width: 800px;
+    margin: 20px auto; /* Adiciona espaçamento no topo e na parte inferior */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #03e9f4;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    max-height: 80vh; /* Limita a altura máxima */
+    overflow-y: auto; /* Adiciona barra de rolagem interna se necessário */
+}
+
+.create-task-container input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Inverte as cores para que o ícone fique visível */
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+}

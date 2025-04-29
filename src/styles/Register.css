@@ -1,0 +1,158 @@
+.register-container {
+    position: relative; /* Adicionado para que os elementos absolutos sejam posicionados em relação a este contêiner */
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #03e9f4;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #03e9f4;
+}
+
+.user-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.back-arrow {
+    position: absolute; /* Altere para absolute */
+    top: 10px; /* Posiciona no topo */
+    left: 10px; /* Posiciona à esquerda */
+    font-size: 18px;
+    cursor: pointer;
+    color: #03e9f4;
+}
+
+.back-arrow:hover {
+    text-decoration: underline;
+}
+
+.register-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 20px; /* Ajuste o espaçamento */
+    letter-spacing: 4px;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.user-box select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+}
+
+.user-box select option {
+    background-color: #000; /* Fundo preto para as opções */
+    color: #fff; /* Texto branco para visibilidade */
+}
+
+.user-box select:focus ~ label,
+.user-box select:not([value=""]) ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
